@@ -20,7 +20,7 @@ class DataActions {
             }); 
         });     
     }
-
+    
     // get pages
     getPages(cb){
         this.api(this.pagesEndPoint).then((response)=>{

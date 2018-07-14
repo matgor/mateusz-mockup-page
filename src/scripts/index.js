@@ -11,6 +11,19 @@ import {
 
 
 class AppInitializer {
+    buildRoutes(data){
+        return data.pages.map((page, i) => {
+            return(
+                <Route
+                    key={i}
+                    component={ Home }
+                    path={`/${page.slug}`}
+                    exact
+                />
+            )
+        })
+    }
+
     run() {
         DataActions.getPages((response)=>{
             render(
@@ -18,6 +31,8 @@ class AppInitializer {
                     <div>
                         <Switch>
                             <Route path="/" component={ Home } exact />
+
+                            {this.buildRoutes(response)}
                             <Route render={() => { return <Redirect to="/" /> }} />
                         </Switch> 
                     </div>
