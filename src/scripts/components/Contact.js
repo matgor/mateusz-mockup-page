@@ -6,7 +6,6 @@ class Contact extends React.Component {
 
         return (
             <div>
-                <h2>Contact page template</h2>
                 <h1>{pageData.title.rendered}</h1>
 
                 <div dangerouslySetInnerHTML={{__html: pageData.excerpt.rendered}} />

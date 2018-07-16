@@ -9,7 +9,7 @@ class Header extends React.Component {
 
         return (
             <div className="header">
-                <Link to="/" style={{marginRight: '10px'}} >Home</Link>
+                <Link to="/" style={{marginRight: '10px'}} >Główna</Link>
 
                 {allPages.map((page) => {
                     if(page.slug != 'home'){
