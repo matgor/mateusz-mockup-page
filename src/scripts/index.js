@@ -1,3 +1,4 @@
+import React from 'react';
 import {render} from 'react-dom';
 import DataActions from 'flux/actions/DataActions.js';
 
@@ -5,6 +6,7 @@ import Home from 'components/Home.js';
 import About from 'components/About.js';
 import Contact from 'components/Contact.js';
 import Header from 'components/Header.js';
+import News from 'components/News.js'
 
 import {
     BrowserRouter as Router,
@@ -47,6 +49,7 @@ class AppInitializer {
                             {this.buildRoutes(response)}
                             <Route render={() => { return <Redirect to="/" /> }} />
                         </Switch> 
+                        <News />
                     </div>
                 </Router>
 

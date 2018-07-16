@@ -1,3 +1,4 @@
+import React from 'react';
 import DataStore from 'flux/stores/DataStore.js'
 
 class Contact extends React.Component {
